@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    background: black;
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    color: pink;
+    font-size: 50px;
+    line-height: 100px;
+    float: left;
+}
+
+nav{
+    float: right;
+    line-height: 100px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: pink;
+    display: block;
+    padding: 10px 57px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav ul li a:hover{
+    background: pink;
+    color: black;
+    border-radius: 50px;
+}
+
+.aboutus__img{
+    height: 200px;
+    width: 200px;
+}
+
+.reviews__img{
+    height: 150px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+.wrapper /*para centrar contenido*/{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.home{
+    color: antiquewhite;
+    padding: 200px;
+    background-image: url(../imagen/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.aboutus {
+    background: pink;
+}
+.derecha {
+    display: grid;
+    grid-template-columns: 65% 25%;
+    padding: 20px 70px;
+}
+.derecha .collumn__75{
+    margin: 0 70px 0 20px;
+}
+.derecha .aboutus__img{
+    margin-left: 70px;
+}
+
+.izquierda {
+    display: grid;
+    grid-template-columns: 25% 65%;
+    padding: 20px 70px;
+}
+.izquierda .collumn__75{
+    margin: 0 0px 0 70px;
+    text-align: end;
+}
+.izquierda .aboutus__img{
+    margin-right: 70px;
+}
