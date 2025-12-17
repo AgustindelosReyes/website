@@ -1,0 +1,184 @@
+/* FAROUWARE PROFESSIONAL THEME 2025
+   Paleta: Deep Black, Dark Grey, Neon Cyan
+*/
+
+:root {
+    --bg-main: #0a0a0a;
+    --bg-card: #161616;
+    --accent: #00d1ff; 
+    --accent-low: rgba(0, 209, 255, 0.2);
+    --text-main: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Navegación --- */
+header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 1.8rem; font-weight: 800; }
+.logo span { color: var(--accent); }
+
+nav ul { display: flex; list-style: none; gap: 2rem; }
+nav a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: 0.3s; }
+nav a:hover { color: var(--accent); }
+
+/* --- Hero --- */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-title { font-size: 4rem; margin-bottom: 1rem; }
+.hero-title span { color: var(--accent); text-shadow: 0 0 20px var(--accent-low); }
+.hero-subtitle { color: var(--text-dim); font-size: 1.2rem; margin-bottom: 2rem; }
+
+/* --- Grid de Proyectos y Reviews --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 50px 0;
+}
+
+/* --- Tarjetas (Cards) --- */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card-img, .reviews__img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.card-content, .review-card {
+    padding: 1.5rem;
+}
+
+.card-title { margin-bottom: 0.5rem; color: #fff; }
+
+/* --- Tags --- */
+.tag-container { display: flex; gap: 10px; margin-top: 1rem; }
+.tag {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    background: var(--accent-low);
+    color: var(--accent);
+    border-radius: 4px;
+}
+
+/* --- Formulario de Contacto --- */
+.contact-card {
+    padding: 2.5rem;
+    margin: 50px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact__input {
+    flex: 1 1 calc(50% - 1rem);
+    background: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.contact__textarea {
+    flex: 1 1 100%;
+    background: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+    min-height: 120px;
+}
+
+.contact__input:focus, .contact__textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-low);
+}
+
+/* --- Botones --- */
+.btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #000;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 20px var(--accent-low);
+    transform: scale(1.02);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-dim);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact__input { flex: 1 1 100%; }
+    .hero-title { font-size: 2.5rem; }
+}
